@@ -5,7 +5,24 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>lab</name>
   <description>lab</description>
-  <build>
-    <finalName>devOps-integration</finalName>
-  </build>
+<build>
+  <finalName>devOps-integration</finalName>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.2.0</version>
+      <configuration>
+        <archive>
+          <manifest>
+            <addClasspath>true</addClasspath>
+            <classpathPrefix>lib/</classpathPrefix>
+            <mainClass>HelloWorld</mainClass>
+          </manifest>
+        </archive>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+
 </project>
