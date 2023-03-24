@@ -1,4 +1,5 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8
 EXPOSE 8080
-ADD target/
-CMD ["catalina.sh", "run"]
+ADD target/devOps-integration.jar devOps-integration.jar
+ENTRYPOINT ["java","-jar","/devOps-integration.jar"] 
+
